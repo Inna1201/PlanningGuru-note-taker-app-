@@ -25,4 +25,4 @@ I have used POST request to add new notes to database.
 
 
 # Link
-[Web page](https://inna1201.github.io/PlanningGuru-note-taker-app-/)
+[Web page](https://warm-stream-19359.herokuapp.com/notes)

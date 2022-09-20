@@ -8,6 +8,7 @@ const writeFile = util.promisify(fs.writeFile);
 const { v4: uuidv4 } = require('uuid');
 
 const PORT = process.env.PORT || 3001;
+// const PORT = 3001;
 
 const app = express();
 
@@ -68,7 +69,9 @@ app.delete('/api/notes/:id', (req, res) => {
         const newNotes = notes.filter(note => note.id !== req.params.id)
         console.log(newNotes)
         // converts back to a string and writes to db.json file
-
+        writeFile('db/db.json', JSON.stringify(newNotes)).then(() => {
+                res.json({ msg: 'OK' })
+        });
 
 
 
