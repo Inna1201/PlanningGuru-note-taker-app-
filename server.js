@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Middleware for serving all files included in a public folder
+// Middleware for using all assets included in a public folder
 app.use(express.static('public'));
 
 // GET route to the index.html page
@@ -46,7 +46,7 @@ app.post('/api/notes', (req, res) => {
     readFile('db/db.json', 'utf-8').then(rawNotes => {
         // converts data to objects array
         const notes = JSON.parse(rawNotes);
-        // adds ID to each created object
+        // adds ID to each new created object
         const noteObject = { title: req.body.title, text: req.body.text, id: uuidv4() }
         // adds new object to already exsisting objects array
         const noteArray = [...notes, noteObject]
