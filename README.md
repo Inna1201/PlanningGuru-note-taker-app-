@@ -5,7 +5,7 @@ In this challenge I have used Express.js to add backend functionality to provide
 
 
 # Project requirements
-Modify starter code to create an application called Note Taker that can be used to write and save notes.
+Modify starter code to create an application that can be used to write and save notes. Deploy the application to Heroku.
 
 
 
@@ -13,14 +13,16 @@ Modify starter code to create an application called Note Taker that can be used 
 I have installed an Express and UUID packages.
 I have used middlewares to format necessary data and to load static assets.
 I have created GET routes to index.html and notes.html pages.
-I have used GET request to retrive notes from database.
+I have used GET request to retrieve notes from database.
 I have used POST request to add new notes to database.
+I have used DELETE request to delete old notes.
+I have deployed the app to Heroku.
 
 
 
 # Screenshot
-![Preview image]()
-![Preview image]()
+![Preview image](./public/assets/images/Screenshot%201.png)
+![Preview image](./public/assets/images/Screenshot%202.png)
 
 
 

@@ -38,7 +38,7 @@ app.get('/api/notes', (req, res) => {
         // sends data to user
         res.json(notes);
 
-    });
+    })
 });
 
 // POST request to add the note
@@ -48,9 +48,9 @@ app.post('/api/notes', (req, res) => {
         // converts data to objects array
         const notes = JSON.parse(rawNotes);
         // adds ID to each new created object
-        const noteObject = { title: req.body.title, text: req.body.text, id: uuidv4() }
+        const noteObject = { title: req.body.title, text: req.body.text, id: uuidv4() };
         // adds new object to already exsisting objects array
-        const noteArray = [...notes, noteObject]
+        const noteArray = [...notes, noteObject];
         // converts data back to a string and writes to db.json file
         writeFile('db/db.json', JSON.stringify(noteArray)).then(() => {
             res.json({ msg: 'OK' })
@@ -60,40 +60,17 @@ app.post('/api/notes', (req, res) => {
 
 // DELETE request to delete the note
 app.delete('/api/notes/:id', (req, res) => {
-    console.log(req.params.id)
     // picks up the string from db.json file
     readFile('db/db.json', 'utf-8').then(oldNotes => {
         // converts data to objects array
-        const notes = JSON.parse(oldNotes)
+        const notes = JSON.parse(oldNotes);
         // removes unvanted object from array
-        const newNotes = notes.filter(note => note.id !== req.params.id)
-        console.log(newNotes)
+        const newNotes = notes.filter(note => note.id !== req.params.id);
         // converts back to a string and writes to db.json file
         writeFile('db/db.json', JSON.stringify(newNotes)).then(() => {
                 res.json({ msg: 'OK' })
         });
-
-
-
-        // const newNotesArray = [...newNotes]
-        // writeFile('db/db.json', JSON.stringify(newNotesArray)).then(() => {
-        //     res.json({ msg: 'OK' })
-
-
-        // writeFile('db/db.json', JSON.stringify(newNotes)).then(() => {
-        //     res.json({ msg: 'OK' })
-
-        // .then(newNotes => {
-        //     writeFile('db/db.json', JSON.stringify(newNotes)).then(()=>{
-        //         res.json({msg: 'OK'})
-        //       })
-        // })
-
-        // .then(filtredNotes => {
-        //     writeFile('db/db.json', JSON.stringify(filtredNotes)).then(()=>{
-        //         res.json({msg: 'OK'})
-        //       })
-        // })
+       
     })
 })
 
