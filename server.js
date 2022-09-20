@@ -7,7 +7,7 @@ const writeFile = util.promisify(fs.writeFile);
 // generates random ID's
 const { v4: uuidv4 } = require('uuid');
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 
