@@ -27,4 +27,4 @@ I have deployed the app to Heroku.
 
 
 # Link
-[Web page](https://warm-stream-19359.herokuapp.com/notes)
+[Web page](https://warm-stream-19359.herokuapp.com/)
