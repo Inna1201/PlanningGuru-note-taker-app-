@@ -1,0 +1,25 @@
+{
+  "name": "planningguru-note-taker-app-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Inna1201/PlanningGuru-note-taker-app-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Inna1201/PlanningGuru-note-taker-app-/issues"
+  },
+  "homepage": "https://github.com/Inna1201/PlanningGuru-note-taker-app-#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "uuid": "^9.0.0"
+  }
+}
